@@ -41,7 +41,7 @@
   outline-color: #3692ff;
 }
 
-.input-password {
+.hide-password {
   position: relative;
   display: flex;
   align-items: center;
@@ -83,10 +83,4 @@
   color: #3192f6;
   text-decoration: underline;
   text-underline-offset: 2px;
-}
-
-.hide-password {
-  position: relative;
-  display: flex;
-  align-items: center;
 }
