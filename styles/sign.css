@@ -1,112 +1,110 @@
-.sign-container {
-  max-width: 400px;
+.auth-wrap {
+  padding: 24px 16px;
+  max-width: 432px;
   margin: 0 auto;
-  padding: 0 16px;
 }
 
-.logo-home-button {
-  margin: 24px auto;
+.logo-link {
   display: block;
-  width: 198px;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
-.logo-home-button img {
-  width: 100%;
+.logo-link img {
+  width: 198px;
 }
 
 .input-item {
   margin-bottom: 24px;
-  display: flex;
-  flex-direction: column;
 }
 
-label {
+.input-item label {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 8px;
 }
 
-input {
+.input-item input {
   padding: 16px 24px;
-  width: 100%;
   background-color: #f3f4f6;
   border: none;
   border-radius: 12px;
   font-size: 16px;
-  line-height: 24px;
+  width: 100%;
 }
 
-input::placeholder {
+.input-item input::placeholder {
   color: #9ca3af;
 }
 
-input:focus {
-  outline-color: #3692ff;
+.input-item input:focus {
+  outline-color: var(--blue);
 }
 
-.input-wrapper {
+.input-wrap {
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
-.toggle-password {
+.err-msg {
+  color: #f74747;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 8px;
+  display: none;
+}
+
+.pw-toggle-btn {
   position: absolute;
   right: 24px;
-  cursor: pointer;
 }
 
-.social-login-container {
+.social-wrap {
   background-color: #e6f2ff;
   border-radius: 8px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 16px 23px;
   margin: 24px 0;
 }
 
-.social-login-container h3 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.social-login-buttons-container {
+.social-links {
   display: flex;
   gap: 16px;
 }
 
-.sign-switch {
+.auth-switch {
   font-weight: 500;
-  font-size: 15px;
   text-align: center;
 }
 
-.sign-switch a {
+.auth-switch a {
   color: #3182f6;
   text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 @media (min-width: 768px) {
-  .sign-container {
+  .auth-wrap {
     max-width: 640px;
+    padding: 48px 0;
   }
 
-  .logo-home-button {
+  .logo-link {
+    margin-bottom: 40px;
+  }
+
+  .logo-link img {
     width: 396px;
-    margin: 48px auto 40px;
   }
 
-  label {
+  .input-item label {
     font-size: 18px;
     margin-bottom: 16px;
   }
 }
 
 @media (min-width: 1280px) {
-  .logo-home-button {
-    margin-top: 60px;
+  .auth-wrap {
+    padding: 60px 0;
   }
 }

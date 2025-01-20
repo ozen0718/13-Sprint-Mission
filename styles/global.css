@@ -1,64 +1,20 @@
+:root {
+  --gray-900: #1b1d1f;
+  --gray-800: #26282b;
+  --gray-600: #454c53;
+  --gray-500: #72787f;
+  --gray-400: #9ea4a8;
+  --gray-200: #e5e7eb;
+  --gray-100: #e8ebed;
+  --gray-50: #f7f7f8;
+  --blue: #3692ff;
+  --header-height: 70px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  color: #374151;
-  word-break: keep-all;
-  font-family: "Pretendard", sans-serif;
-}
-
-header, footer, .wrapper {
-  padding: 0 16px;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dfdfdf;
-}
-
-main {
-  margin-top: 70px;
-}
-
-footer {
-  padding: 0 104px;
-  box-sizing: border-box;
-  background-color: #111827;
-  padding: 32px ;
-  font-size: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 60px;
-  height: 160px;
-}
-
-#copyright {
-  order: 3;
-  flex-basis: 100%;
-  color: #9ca3af;
-  text-align: center;
-}
-
-#footerMenu, #socialMedia {
-  display: flex;
-  gap: 30px;
-}
-
-#socialMedia {
-  gap: 12px;
 }
 
 a {
@@ -66,47 +22,108 @@ a {
   color: inherit;
 }
 
-img {
-  vertical-align: bottom;
-}
-
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  appearance: none;
 }
 
 button {
   background: none;
   border: none;
   cursor: pointer;
-  font: inherit;
-  color: inherit;
-  appearance: none;
 }
 
-.button {
-  background-color: #3692ff;
-  color: #ffffff;
-  display: inline-flex;
+img {
+  vertical-align: bottom;
+}
+
+body {
+  color: #374151;
+  font-family: "Pretendard", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 0 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #dfdfdf;
 }
 
-.button:hover {
+.with-header {
+  margin-top: var(--header-height);
+}
+
+footer {
+  background-color: #111827;
+  color: #9ca3af;
+  font-size: 16px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+#copy {
+  order: 3;
+  flex-basis: 100%;
+}
+
+#menu {
+  display: flex;
+  gap: 30px;
+  color: var(--gray-200);
+}
+
+#social {
+  display: flex;
+  gap: 12px;
+}
+
+.wrap {
+  width: 100%;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.btn {
+  background-color: var(--blue);
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
   background-color: #1967d6;
 }
 
-.button:focus {
+.btn:focus {
   background-color: #1251aa;
 }
 
-.button:disabled {
+.btn:disabled {
   background-color: #9ca3af;
-  cursor: default;
+  pointer-events: none;
 }
 
-.pill-button {
+.pill {
   font-size: 16px;
   font-weight: 600;
   border-radius: 999px;
@@ -117,16 +134,20 @@ button {
   width: 100%;
 }
 
-.break-on-desktop {  /*속성 요소를 어떻게 표현할지*/
+.break-desktop {
   display: none;
 }
 
 @media (min-width: 768px) {
-  header, .wrapper {
+  header {
     padding: 0 24px;
   }
 
-  .pill-button {
+  .wrap {
+    padding: 0 24px;
+  }
+
+  .pill {
     font-size: 20px;
     font-weight: 700;
     padding: 16px 126px;
@@ -136,19 +157,27 @@ button {
     padding: 32px 104px 108px;
   }
 
-  #copyright {
+  #copy {
     flex-basis: auto;
     order: 0;
   }
 }
 
 @media (min-width: 1280px) {
-  header, footer {
+  header {
     padding: 0 200px;
   }
 
-  .break-on-desktop {
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .break-desktop {
     display: inline;
   }
-}
 
+  footer {
+    padding: 32px 200px 108px;
+  }
+}
